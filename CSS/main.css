@@ -1,91 +1,101 @@
 /* Tema das páginas(CSS) */
 /* Cores personalizadas */
-        :root {
-            --text-black-blueoil: #004953;
-            --bg-black-blueoil: #39bfd1;
-        }
+:root {
+    --text-black-blueoil: rgb(3, 73, 3);
+    --bg-black-blueoil: rgb(0, 128, 0);
+}
 
-        body {
-            background-color: bisque;
-            background-attachment: fixed;
-            background-image: url("../img/cafezin.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+body {
+    background-color: rgba(255, 228, 196, 0.253);
+    background-attachment: fixed;
+    background-image: url("../img/amazonia.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-        #wrap header .logotipo {
-            height: 100px;
-            width: auto;
-        }
+#wrap header .logotipo {
+    height: 100px;
+    width: auto;
+}
 
-        #wrap header small {
-            font-size: 73%;
-        }
+#wrap header small {
+    font-size: 73%;
+}
 
-        .logged img,
-        .unlogged img {
-            height: 2rem;
-            width: 2rem;
-        }
+.logged img,
+.unlogged img {
+    height: 2rem;
+    width: 2rem;
+}
 
-        @media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) {
 
-            .logged img,
-            .unlogged img {
-                height: 4rem;
-                width: 4rem;
-            }
-        }
+    .logged img,
+    .unlogged img {
+        height: 4rem;
+        width: 4rem;
+    }
+}
 
-        .logged .dropdown-toggle,
-        .unlogged .dropdown-toggle {
-            color: var(--text-black-blueoil);
-            text-decoration: none;
-        }
+.logged .dropdown-toggle,
+.unlogged .dropdown-toggle {
+    color: var(--text-black-blueoil);
+    text-decoration: none;
+}
 
-        .text-black-blueoil {
-            color: var(--text-black-blueoil);
-        }
+.text-black-blueoil {
+    color: var(--text-black-blueoil);
+}
 
-        .bg-black-blueoil {
-            background-color: var(--bg-black-blueoil);
-        }
+.bg-black-blueoil {
+    background-color: var(--bg-black-blueoil);
+}
 
-        .navbar-brand img {
-            height: 2.5rem;
-            width: auto;
-        }   
+.navbar-brand img {
+    height: 2.5rem;
+    width: auto;
+}
 
-        .navbar-brand {
-            opacity: 1;
-            /* visibility: hidden; */
-            display: none;
-            transition: opacity .3s ease;
-        }
+.navbar-brand {
+    opacity: 1;
+    /* visibility: hidden; */
+    display: none;
+    transition: opacity .3s ease;
+}
 
-        .navbar-brand.show {
-            opacity: 1;
-            /* visibility: visible; */
-            display: block;
-        }
+.navbar-brand.show {
+    opacity: 1;
+    /* visibility: visible; */
+    display: block;
+}
 
-        #wrap header .dropdown-menu {
-            z-index: 10000;
-        }
+#wrap header .dropdown-menu {
+    z-index: 10000;
+}
 
-        /* Links do rodapé usando variáveis do Bootstrap */
-        #wrap footer a {
-            font-size: 1.8rem;
-            color: var(--bs-light);
-        }
+/* Links do rodapé usando variáveis do Bootstrap */
+#wrap footer a {
+    font-size: 1.8rem;
+    color: var(--bs-light);
+}
 
-        #wrap footer a:hover {
-            color: var(--bg-black-blueoil);
-        }
+#wrap footer a:hover {
+    color: var(--bg-black-blueoil);
+}
 
-        main>.container>.row>section,
-        main>.container>.row>aside {
-            display: flex;
-            flex-direction: column;
-        }
+main>.container>.row>section,
+main>.container>.row>aside {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formulário de contatos */
+#contactForm {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+}
+.carousel {
+    --bs-carousel-control-icon-filter: none;
+}
