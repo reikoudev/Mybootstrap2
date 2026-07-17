@@ -1,8 +1,8 @@
 /* Tema das páginas(CSS) */
 /* Cores personalizadas */
 :root {
-    --text-black-blueoil: rgb(3, 73, 3);
-    --bg-black-blueoil: rgb(0, 128, 0);
+    --text-black-blueoil: rgb(181, 37, 61);
+    --bg-black-blueoil: pink;
 }
 
 body {
