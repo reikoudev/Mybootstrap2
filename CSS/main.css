@@ -1,19 +1,125 @@
 /* Tema das páginas(CSS) */
 /* Cores personalizadas */
 :root {
-    --text-black-blueoil: rgb(181, 37, 61);
-    --bg-black-blueoil: pink;
+    --text-black-blueoil: magenta;
+    --bg-black-blueoil: ;
 }
 
-body {
-    background-color: rgba(255, 228, 196, 0.253);
-    background-attachment: fixed;
-    background-image: url("../img/");
-    background-position: center;
-    background-repeat: no-repeat;
+body{
+    background: url("/img/ordemparanormal.jpg"),linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85));
     background-size: cover;
-
+    background-position: center;
+    background-attachment: fixed;
 }
-#wrap header small {
-    font-size: 73%;
+.imagens{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+.foto-card{
+    width:300px;
+    cursor:pointer;
+}
+
+.foto-card img{
+    width:100%;
+    border-radius:20px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+.foto-card img:hover{
+    transform:scale(1.03);
+}
+
+.mensagem{
+
+    background:rgb(245, 67, 97);
+    color:#737171;
+
+    margin-top:-15px;
+
+    border-radius:0 0 20px 20px;
+
+    padding:0 20px;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transition:.8s ease;
+}
+
+.foto-card.ativa .mensagem{
+
+    max-height: 1000px;
+
+    opacity:1;
+
+    padding:20px;
+}
+
+.foto-card.ativa img{
+
+    transform:scale(1.04);
+}
+.card{
+    width:700px;
+    margin:auto;
+    padding:30px;
+
+    background:rgba(20,20,20,.75);
+
+    border:1px solid #b00020;
+
+    border-radius:15px;
+
+    backdrop-filter:blur(5px);
+
+    margin-top:80px;
+
+    transition:.4s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px #b00020;
+}
+#btnMusica{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(15,15,15,.8);
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 0 15px rgba(176,0,32,.4);
+
+    transition: .3s;
+}
+
+#btnMusica:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(176,0,32,.9);
+    background:#b00020;
+}
+
+#btnMusica:active{
+    transform: scale(.95);
 }

@@ -5,42 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Importa o framework Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/main.css">
     <title>Pedido-de-Namoro</title>
 </head>
 
-<body data-bs-theme="light" class="d-flex flex-column min-vh-100">
+<body data-bs-theme="dark" class="d-flex flex-column min-vh-100">
 
-    <div>
-        <header class="bg-black-blueoil">
-            <!-- Jumbotron -->
-            <div class="container p-2 text-black d-flex flex-column flex-sm-row">
+    <div class="imagens">
 
-                <div class="d-flex align-items-center gap-2">
-                    <h1 class="text-black-blueoil text-center">
-                        Minha Rainha
-                    </h1>
-                </div>
-
+        <div class="foto-card">
+            <img src="img/linda1.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ Você lembra? </h3>
+                <p>
+                    Ainda é recente, mas amo lembrar de quando você fala sobre Ordem Paranormal e de como a gente ficou
+                    duas horas inteiras só com você me explicando tudo. Eu amei ver você feliz contando tudo para mim e
+                    espero que a gente maratone tudo junto, enquanto você me fala do que mais gosta em cada personagem.
+                </p>
             </div>
-        </header>
-        <main class="flex-grow-1 d-flex">
-            <div class="container d-flex">
-                <div class="row flex-grow-1"></div>
+        </div>
+
+        <div class="foto-card">
+            <img src="img/linda2.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ Seu gosto musical </h3>
+                <p>
+                    Seu gosto musical é incrível, e eu amo isso. A gente combina tanto que nossa playlist realmente
+                    parece que foi feita por uma pessoa só (tirando a parte de que eu coloquei a maioria das músicas
+                    kakaka). Sempre que eu escuto a primeira música que eu te dediquei, eu me lembro de você, como se
+                    você estivesse aqui, e sinto o calor do seu corpo.
+                </p>
             </div>
+        </div>
 
-            
-        </main>
+        <div class="foto-card">
+            <img src="img/linda3.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ O que eu sinto</h3>
+                <p>
+                    Toda vez que a gente fica apenas se encarando na call, sem dizer uma palavra, eu me pego imaginando
+                    o nosso futuro e como vai ser viver ao seu lado. É impossível não sorrir pensando nisso. E eu adoro
+                    ver você toda boba quando percebe que eu estou te olhando. Você sempre pede para eu parar, mas, ao
+                    mesmo tempo, fica completamente vermelha e dá aquela risadinha de nervoso que eu acho a coisa mais
+                    linda do mundo.
 
+                </p>
+            </div>
+        </div>
+        <div class="foto-card">
+            <img src="img/linda4(1).jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ Sabia que...</h3>
+                <p>
+                    Sabia que eu adoro ver o seu sorriso quando você olha para mim? Você fica mil vezes mais linda
+                    quando eu lembro que você também me ama. Isso derrete o meu coração e sempre consegue transformar
+                    até o meu pior dia em um dia melhor.
+
+                    Ainda mais quando passamos o dia inteiro em call, só nós dois, juntinhos.
+
+                </p>
+            </div>
+        </div>
+        <div class="foto-card">
+            <img src="img/linda5.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ O que eu sinto</h3>
+                <p>
+                    Escreva aqui o terceiro texto.
+                </p>
+            </div>
+        </div>
+        <div class="foto-card">
+            <img src="img/linda6.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ O que eu sinto</h3>
+                <p>
+                    Escreva aqui o terceiro texto.
+                </p>
+            </div>
+        </div>
+        <div class="foto-card">
+            <img src="img/linda7.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ O que eu sinto</h3>
+                <p>
+                    Escreva aqui o terceiro texto.
+                </p>
+            </div>
+        </div>
+        <div class="foto-card">
+            <img src="img/linda8.jpeg" alt="">
+            <div class="mensagem">
+                <h3>✨ O que eu sinto</h3>
+                <p>
+                    Escreva aqui o terceiro texto.
+                </p>
+            </div>
+        </div>
     </div>
+    <div> <a href="pedido.html"> Next</a> </div>
     <!-- Importa o framework Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <audio id="musica" loop>
+    <source src="mp3/copa.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btnMusica">
+    <span>🎵</span>
+</button>
 </body>
 
 </html>
