@@ -2,124 +2,284 @@
 /* Cores personalizadas */
 :root {
     --text-black-blueoil: magenta;
-    --bg-black-blueoil: ;
+    --bg-black-blueoil: pink;
 }
 
-body{
-    background: url("/img/ordemparanormal.jpg"),linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85));
+body {
+    background: var(--bg-black-blueoil);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
-.imagens{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:40px;
-    margin-top:40px;
+
 }
 
-.foto-card{
-    width:300px;
-    cursor:pointer;
+.imagens {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.foto-card img{
-    width:100%;
-    border-radius:20px;
-    transition:.4s;
-    box-shadow:0 8px 20px rgba(0,0,0,.4);
+.foto-card {
+    width: 300px;
+    cursor: pointer;
 }
 
-.foto-card img:hover{
-    transform:scale(1.03);
+.foto-card img {
+    width: 100%;
+    border-radius: 20px;
+    transition: .4s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
 }
 
-.mensagem{
-
-    background:rgb(245, 67, 97);
-    color:#737171;
-
-    margin-top:-15px;
-
-    border-radius:0 0 20px 20px;
-
-    padding:0 20px;
-
-    max-height:0;
-
-    overflow:hidden;
-
-    opacity:0;
-
-    transition:.8s ease;
+.foto-card img:hover {
+    transform: scale(1.03);
 }
 
-.foto-card.ativa .mensagem{
+.mensagem {
+
+    background: rgb(245, 67, 97);
+    color: #f7f7f7;
+
+    margin-top: -15px;
+
+    border-radius: 0 0 20px 20px;
+
+    padding: 0 20px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition: .8s ease;
+}
+
+.foto-card.ativa .mensagem {
 
     max-height: 1000px;
 
-    opacity:1;
+    opacity: 1;
 
-    padding:20px;
+    padding: 20px;
 }
 
-.foto-card.ativa img{
+.foto-card.ativa img {
 
-    transform:scale(1.04);
+    transform: scale(1.04);
 }
-.card{
-    width:700px;
-    margin:auto;
-    padding:30px;
 
-    background:rgba(20,20,20,.75);
+.card {
+    width: 700px;
+    margin: auto;
+    padding: 30px;
 
-    border:1px solid #b00020;
+    background: rgba(20, 20, 20, .75);
 
-    border-radius:15px;
+    border: 1px solid #b00020;
 
-    backdrop-filter:blur(5px);
+    border-radius: 15px;
 
-    margin-top:80px;
+    backdrop-filter: blur(5px);
 
-    transition:.4s;
+    margin-top: 80px;
+
+    transition: .4s;
 }
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px #b00020;
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #b00020;
 }
-#btnMusica{
+
+/* ========================= */
+.heart-zoom {
+
     position: fixed;
-    top: 20px;
-    right: 20px;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+
+}
+
+
+.heart-zoom svg {
+
+    width: 100px;
+    height: 100px;
+
+    fill: #ff4d88;
+
+    opacity: 0;
+
+    transform: scale(0.05);
+
+    animation:
+
+        aproximar 4s linear infinite;
+
+
+    filter:
+        drop-shadow(0 0 20px #ff4d88);
+
+}
+
+
+
+@keyframes aproximar {
+
+
+    0% {
+
+        transform: scale(0.05);
+
+        opacity: 0;
+
+        filter: blur(10px);
+
+    }
+
+
+
+    15% {
+
+        opacity: 1;
+
+        filter: blur(5px);
+
+    }
+
+
+
+    70% {
+
+        transform: scale(8);
+
+        opacity: 0.8;
+
+        filter: blur(2px);
+
+    }
+
+
+
+    100% {
+
+        transform: scale(20);
+
+        opacity: 0;
+
+        filter: blur(15px);
+
+    }
+
+}
+
+
+
+#playMusic {
+
+    position: fixed;
+
+    bottom: 400px;
+    right: 10px;
 
     width: 60px;
     height: 60px;
 
-    border: none;
     border-radius: 50%;
 
-    background: rgba(15,15,15,.8);
+    border: none;
+
+    background: #ff4d88;
+
     color: white;
 
     font-size: 25px;
 
     cursor: pointer;
 
-    backdrop-filter: blur(8px);
+    box-shadow:
+        0 0 20px #ff4d88;
 
-    box-shadow: 0 0 15px rgba(176,0,32,.4);
+    z-index: 10;
 
-    transition: .3s;
 }
 
-#btnMusica:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(176,0,32,.9);
-    background:#b00020;
+.next-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:80px 0 10px;
+
 }
 
-#btnMusica:active{
-    transform: scale(.95);
+
+
+.next-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 15px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    background:rgba(255,77,136,.18);
+
+    border:1px solid rgba(255,77,136,.5);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 25px rgba(255,77,136,.4);
+
+    transition:.35s;
+
+}
+
+
+
+.next-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 40px rgba(255,77,136,.8);
+
+}
+
+
+
+.next-btn i{
+
+    transition:.35s;
+
+}
+
+
+
+.next-btn:hover i{
+
+    transform:translateX(8px);
+
 }
